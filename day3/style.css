@@ -1,0 +1,31 @@
+form{
+    width: 500px;
+    margin: 30px auto;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #a0a0a0;
+}
+
+input,select,textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    /* border-color: black; */
+    border: 2px solid black;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+}
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+    /* border-color: rgb(137, 196, 50); */
+    border: 3px solid green;
+}
