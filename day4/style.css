@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-size: 30px;
+}
+a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+span{
+    color: red;
+}
+
+.contents{
+    text-align: center;
+    margin-top: 300px;
+    font-size: 80px;
+}
+p{
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+}
+.active{
+    border-bottom: 3px solid red;
+}
+
+
+@media screen and (max-width:650px) {
+    a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:550px) {
+    .logo{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:470px) {
+    .logo{
+        font-size: 15px;
+    }
+    a{
+        font-size: 10px;
+    }
+    p{
+        font-size: 50px;
+    }
+}
