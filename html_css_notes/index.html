@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<!-- 
+    <!DOCTYPE html> is called the DOCTYPE declaration.
+
+    It tells the browser that this document uses HTML5.
+
+    It is NOT an HTML tag and does not need a closing tag.
+
+    Usage:
+    Always write <!DOCTYPE html> at the very beginning of an HTML document.
+-->
+
+
+<html lang="en">
+<!--
+    <html> is the root element of an HTML document.
+
+    All other HTML elements are written inside <html>.
+
+    lang="en" tells the browser and search engines that
+    the main language of the page is English.
+
+    Usage:
+    <html lang="en">
+-->
+
+
+<head>
+    <!--
+        <head> contains information ABOUT the webpage.
+
+        The content inside <head> is generally not displayed
+        directly on the webpage.
+
+        It contains:
+        - Page title
+        - Character encoding
+        - Responsive settings
+        - CSS links
+        - SEO information
+        - Other metadata
+    -->
+
+
+    <meta charset="UTF-8">
+    <!--
+        <meta charset="UTF-8"> defines the character encoding.
+
+        UTF-8 allows the webpage to correctly display:
+        - English
+        - Numbers
+        - Symbols
+        - Indian languages
+        - Emojis
+        - Many other characters
+
+        Usage:
+        It should normally be included in every HTML document.
+    -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        This meta tag makes the webpage responsive.
+
+        width=device-width
+        ------------------
+        Makes the webpage width equal to the device screen width.
+
+        initial-scale=1.0
+        -----------------
+        Sets the initial zoom level to 100%.
+
+        Usage:
+        Very important when creating websites for mobile,
+        tablet and desktop devices.
+    -->
+
+
+    <title>My Webpage</title>
+    <!--
+        <title> defines the title of the webpage.
+
+        The title is displayed in:
+        - Browser tab
+        - Browser history
+        - Bookmarks
+        - Search engine results in many cases
+
+        Example:
+        <title>Student Management System</title>
+    -->
+
+
+    <meta name="description" content="Learn HTML from basic to intermediate level.">
+    <!--
+        This meta tag provides a short description of the webpage.
+
+        Search engines may use this description in search results.
+
+        name="description"
+        ------------------
+        Specifies that this is the page description.
+
+        content="..."
+        ---------------
+        Contains the actual description.
+
+        Usage:
+        Useful for SEO (Search Engine Optimization).
+    -->
+
+
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <link> connects an external resource to the HTML page.
+
+        Here it connects an external CSS file.
+
+        rel="stylesheet"
+        ----------------
+        Specifies that the linked file is a CSS stylesheet.
+
+        href="style.css"
+        ----------------
+        Specifies the location of the CSS file.
+
+        Usage:
+        Used to connect external CSS files.
+    -->
+
+
+</head>
+
+
+<body>
+    <!--
+        <body> contains all the visible content of the webpage.
+
+        Examples:
+        - Headings
+        - Paragraphs
+        - Images
+        - Links
+        - Tables
+        - Forms
+        - Buttons
+        - Lists
+        - Videos
+        - Audio
+    -->
+
+
+    <!-- ============================= -->
+    <!--          HEADINGS              -->
+    <!-- ============================= -->
+
+
+    <h1>HTML Tutorial</h1>
+    <!--
+        <h1> is the most important/main heading.
+
+        HTML provides six heading levels:
+
+        <h1> - Main heading
+        <h2> - Sub-heading
+        <h3> - Sub-sub-heading
+        <h4> - Smaller heading
+        <h5> - Smaller heading
+        <h6> - Smallest heading
+
+        Usage:
+        Use headings to create the structure of a webpage.
+
+        Normally, a page should have one main <h1>.
+    -->
+
+
+    <h2>Introduction to HTML</h2>
+    <!--
+        <h2> is normally used for major sections
+        under the main <h1> heading.
+    -->
+
+
+    <h3>What is HTML?</h3>
+    <!--
+        <h3> is used for subsections under an <h2>.
+    -->
+
+
+    <!-- ============================= -->
+    <!--          PARAGRAPH             -->
+    <!-- ============================= -->
+
+
+    <p>HTML is used to create the structure of webpages.</p>
+    <!--
+        <p> stands for Paragraph.
+
+        It is used to display a paragraph of text.
+
+        Usage:
+        Use <p> whenever you want to write normal paragraph content.
+    -->
+
+
+    <!-- ============================= -->
+    <!--       LINE BREAK / HR          -->
+    <!-- ============================= -->
+
+
+    <br>
+    <!--
+        <br> stands for Line Break.
+
+        It moves the following content to a new line.
+
+        It is an empty/void element, so it does not have:
+        </br>
+
+        Usage:
+        Use when a line break is actually part of the content.
+
+        Example:
+        Hello<br>
+        World
+    -->
+
+
+    <hr>
+    <!--
+        <hr> represents a thematic break.
+
+        Usually displayed as a horizontal line.
+
+        It is useful for separating different sections
+        of a webpage.
+
+        It is also a void element.
+    -->
+
+
+    <!-- ============================= -->
+    <!--       TEXT FORMATTING          -->
+    <!-- ============================= -->
+
+
+    <b>Bold Text</b>
+    <!--
+        <b> makes text visually bold.
+
+        It does NOT indicate that the text is especially important.
+
+        Usage:
+        Use when you only need visual bold formatting.
+    -->
+
+
+    <strong>Important Text</strong>
+    <!--
+        <strong> indicates that the content has strong importance.
+
+        Browsers normally display it as bold.
+
+        Difference:
+        <b>       = visual bold
+        <strong>  = semantic importance
+
+        Prefer <strong> when the text is actually important.
+    -->
+
+
+    <i>Italic Text</i>
+    <!--
+        <i> displays text in italic style.
+
+        It is generally used for text that is stylistically
+        different from surrounding content.
+    -->
+
+
+    <em>Emphasized Text</em>
+    <!--
+        <em> indicates emphasis.
+
+        Browsers normally display emphasized text in italic.
+
+        Difference:
+        <i>      = stylistic difference
+        <em>     = semantic emphasis
+    -->
+
+
+    <u>Underlined Text</u>
+    <!--
+        <u> displays text with an underline.
+
+        Avoid using underlined text for normal content
+        because users may think it is a link.
+    -->
+
+
+    <mark>Highlighted Text</mark>
+    <!--
+        <mark> highlights text.
+
+        By default, browsers normally display it with
+        a highlighted background.
+
+        Useful for:
+        - Search results
+        - Important words
+        - Highlighting information
+    -->
+
+
+    <small>Small Text</small>
+    <!--
+        <small> represents smaller side information.
+
+        Common uses:
+        - Copyright information
+        - Legal information
+        - Notes
+        - Disclaimer text
+    -->
+
+
+    <del>Old Price: ₹999</del>
+    <!--
+        <del> represents deleted/removed content.
+
+        Browsers normally display it with a line through it.
+
+        Useful for showing:
+        Old price → New price
+    -->
+
+
+    <ins>New Price: ₹799</ins>
+    <!--
+        <ins> represents content that has been inserted.
+
+        Browsers normally display it with an underline.
+    -->
+
+
+    H<sub>2</sub>O
+    <!--
+        <sub> creates subscript text.
+
+        Example:
+        H2O
+
+        Useful for:
+        - Chemical formulas
+        - Mathematical notation
+    -->
+
+
+    x<sup>2</sup>
+    <!--
+        <sup> creates superscript text.
+
+        Example:
+        x²
+
+        Useful for:
+        - Powers
+        - Footnotes
+        - Mathematical expressions
+    -->
+
+
+    <code>print("Hello")</code>
+    <!--
+        <code> represents a piece of computer code.
+
+        Browsers normally display it using a monospace font.
+
+        Useful when displaying:
+        - HTML code
+        - Python code
+        - JavaScript code
+        - Commands
+    -->
+
+
+    <pre>
+        Line 1
+        Line 2
+        Line 3
+    </pre>
+    <!--
+        <pre> preserves spaces and line breaks exactly
+        as written in the HTML source.
+
+        Useful for:
+        - Code blocks
+        - Preformatted text
+        - ASCII diagrams
+    -->
+
+
+    <blockquote>
+        Learning HTML is the first step toward web development.
+    </blockquote>
+    <!--
+        <blockquote> represents a longer quotation.
+
+        Useful when displaying a quote from another source.
+    -->
+
+
+    <q>HTML creates the structure of a webpage.</q>
+    <!--
+        <q> represents a short inline quotation.
+
+        Browsers usually add quotation marks automatically.
+    -->
+
+
+    <!-- ============================= -->
+    <!--             LINKS              -->
+    <!-- ============================= -->
+
+
+    <a href="https://www.google.com">Visit Google</a>
+    <!--
+        <a> stands for Anchor.
+
+        It creates a hyperlink.
+
+        href
+        ----
+        Specifies where the link should go.
+
+        Usage:
+        Used to:
+        - Open another webpage
+        - Open another website
+        - Open a file
+        - Open an email
+        - Navigate to another section
+    -->
+
+
+    <a href="about.html">About Us</a>
+    <!--
+        This is an example of an internal link.
+
+        It opens another HTML file from the same website.
+    -->
+
+
+    <a href="#contact">Go to Contact Section</a>
+    <!--
+        This link moves the user to an element
+        having id="contact".
+    -->
+
+
+    <a href="https://example.com" target="_blank">
+        Open Website in New Tab
+    </a>
+    <!--
+        target="_blank" opens the link in a new browsing context,
+        commonly a new tab.
+
+        Usage:
+        Useful when you don't want the user to leave
+        the current webpage.
+    -->
+
+
+    <!-- ============================= -->
+    <!--             IMAGE              -->
+    <!-- ============================= -->
+
+
+    <img src="student.jpg" alt="Student studying HTML">
+    <!--
+        <img> displays an image.
+
+        src
+        ---
+        Specifies the location/path of the image.
+
+        alt
+        ---
+        Provides alternative text describing the image.
+
+        The alt text is important for:
+        - Accessibility
+        - Screen readers
+        - When the image cannot load
+        - SEO
+
+        <img> is a void element and does not have a closing tag.
+    -->
+
+
+    <!-- ============================= -->
+    <!--             LISTS              -->
+    <!-- ============================= -->
+
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <!--
+        <ul> means Unordered List.
+
+        It normally displays bullet points.
+
+        <li> means List Item.
+
+        Usage:
+        Use when the order of items does not matter.
+    -->
+
+
+    <ol>
+        <li>Open VS Code</li>
+        <li>Create HTML file</li>
+        <li>Write HTML code</li>
+    </ol>
+    <!--
+        <ol> means Ordered List.
+
+        It normally displays numbered items.
+
+        Useful when the order/sequence matters.
+    -->
+
+
+    <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <!--
+        type="A" changes the numbering style.
+
+        Other examples:
+        type="1" → 1, 2, 3
+        type="A" → A, B, C
+        type="a" → a, b, c
+        type="I" → I, II, III
+        type="i" → i, ii, iii
+    -->
+
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+    <!--
+        <dl> = Description List
+
+        <dt> = Description Term
+
+        <dd> = Description/Definition
+
+        Useful for:
+        - Glossaries
+        - Definitions
+        - Question and answer style content
+    -->
+
+
+    <!-- ============================= -->
+    <!--             TABLE              -->
+    <!-- ============================= -->
+
+
+    <table border="1">
+
+        <caption>Student Details</caption>
+        <!--
+            <caption> provides a title/description for the table.
+        -->
+
+
+        <thead>
+            <!--
+                <thead> contains the header rows of a table.
+            -->
+
+            <tr>
+                <!--
+                    <tr> means Table Row.
+                -->
+
+                <th>Name</th>
+                <!--
+                    <th> means Table Header.
+
+                    Used for headings of columns or rows.
+                -->
+
+                <th>Age</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <!--
+                <tbody> contains the main data of the table.
+            -->
+
+            <tr>
+                <td>Rahul</td>
+                <!--
+                    <td> means Table Data.
+
+                    Used to store normal table data.
+                -->
+
+                <td>20</td>
+                <td>B.Tech</td>
+            </tr>
+
+            <tr>
+                <td>Priya</td>
+                <td>21</td>
+                <td>BCA</td>
+            </tr>
+        </tbody>
+
+
+        <tfoot>
+            <!--
+                <tfoot> contains footer/summary information
+                of the table.
+            -->
+
+            <tr>
+                <td colspan="3">Total Students: 2</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+    <!-- ============================= -->
+    <!--        TABLE ATTRIBUTES        -->
+    <!-- ============================= -->
+
+
+    <table border="1">
+
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Marks</th>
+        </tr>
+
+        <tr>
+            <td>Rahul</td>
+            <td>HTML</td>
+            <td>90</td>
+        </tr>
+
+    </table>
+
+    <!--
+        colspan
+        -------
+        Makes one table cell span across multiple columns.
+
+        rowspan
+        -------
+        Makes one table cell span across multiple rows.
+
+        Example:
+        <td colspan="2">Data</td>
+        <td rowspan="2">Data</td>
+
+        Note:
+        In modern websites, CSS should normally be used
+        for table styling instead of border="1".
+    -->
+
+
+    <!-- ============================= -->
+    <!--          CONTAINERS            -->
+    <!-- ============================= -->
+
+
+    <div>
+        <h2>Student Information</h2>
+        <p>This information is inside a div.</p>
+    </div>
+    <!--
+        <div> is a generic block-level container.
+
+        It does not have any special meaning by itself.
+
+        It is commonly used to group elements together.
+
+        Very commonly used with CSS and JavaScript.
+    -->
+
+
+    <span>Important text</span>
+    <!--
+        <span> is a generic inline container.
+
+        It is useful when you want to style or manipulate
+        a small portion of text without creating a new block.
+
+        Example:
+        <p>Hello <span>John</span></p>
+    -->
+
+
+    <!-- ============================= -->
+    <!--       SEMANTIC ELEMENTS        -->
+    <!-- ============================= -->
+
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+    <!--
+        <header> represents introductory content
+        for a page or section.
+
+        It may contain:
+        - Logo
+        - Website title
+        - Navigation
+        - Introduction
+    -->
+
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <!--
+        <nav> represents a section containing
+        navigation links.
+
+        Search engines and assistive technologies
+        can understand the purpose of this section.
+    -->
+
+
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main content of the webpage.</p>
+    </main>
+    <!--
+        <main> represents the main content of the webpage.
+
+        A page should generally have only one <main> element.
+
+        It should contain content that is directly related
+        to the main purpose of the page.
+    -->
+
+
+    <section>
+        <h2>About Us</h2>
+        <p>Information about our organization.</p>
+    </section>
+    <!--
+        <section> represents a thematic section of content.
+
+        Usually a section should have a heading.
+
+        Examples:
+        - About Us
+        - Services
+        - Features
+        - Contact
+    -->
+
+
+    <article>
+        <h2>HTML Tutorial</h2>
+        <p>This is an independent article.</p>
+    </article>
+    <!--
+        <article> represents independent/self-contained content.
+
+        Examples:
+        - Blog post
+        - News article
+        - Forum post
+        - Product review
+    -->
+
+
+    <aside>
+        <h3>Related Articles</h3>
+        <p>Learn CSS after HTML.</p>
+    </aside>
+    <!--
+        <aside> contains content related to the main content
+        but not part of the main flow.
+
+        Examples:
+        - Sidebar
+        - Related links
+        - Advertisements
+        - Additional information
+    -->
+
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+    <!--
+        <footer> represents footer information
+        for a page or section.
+
+        Common content:
+        - Copyright
+        - Contact information
+        - Social media links
+        - Useful links
+    -->
+
+
+    <!-- ============================= -->
+    <!--             FORM               -->
+    <!-- ============================= -->
+
+
+    <form action="/submit" method="post">
+        <!--
+            <form> creates a form for collecting user input.
+
+            action
+            ------
+            Specifies where the form data should be sent.
+
+            method
+            ------
+            Specifies how the data should be submitted.
+
+            Common methods:
+            GET  → data is generally included in the URL
+            POST → data is sent in the request body
+
+            Forms are commonly used for:
+            - Login
+            - Registration
+            - Contact forms
+            - Search
+            - Payments
+        -->
+
+
+        <label for="name">Name:</label>
+        <!--
+            <label> provides a text label for a form control.
+
+            The "for" attribute should match the id
+            of the related input.
+
+            This improves accessibility and usability.
+        -->
+
+
+        <input type="text" id="name" name="name">
+        <!--
+            <input> creates an input field.
+
+            type="text"
+            -------------
+            Creates a single-line text input.
+
+            id
+            --
+            Uniquely identifies the element.
+
+            name
+            ----
+            Identifies the field when form data is submitted.
+        -->
+
+
+        <br><br>
+
+
+        <label for="email">Email:</label>
+
+        <input type="email" id="email" name="email">
+        <!--
+            type="email" creates an email input.
+
+            Browsers can perform basic email validation.
+
+            On mobile devices, it may also show
+            an email-friendly keyboard.
+        -->
+
+
+        <br><br>
+
+
+        <label for="password">Password:</label>
+
+        <input type="password" id="password" name="password">
+        <!--
+            type="password" hides the characters entered
+            by the user.
+
+            Commonly used for:
+            - Login password
+            - Account password
+        -->
+
+
+        <br><br>
+
+
+        <label for="age">Age:</label>
+
+        <input type="number" id="age" name="age">
+        <!--
+            type="number" is used for numerical input.
+
+            Useful for:
+            - Age
+            - Quantity
+            - Marks
+            - Number of items
+        -->
+
+
+        <br><br>
+
+
+        <label for="dob">Date of Birth:</label>
+
+        <input type="date" id="dob" name="dob">
+        <!--
+            type="date" provides a date input control.
+
+            The browser may display a date picker.
+        -->
+
+
+        <br><br>
+
+
+        <label for="color">Choose Color:</label>
+
+        <input type="color" id="color" name="color">
+        <!--
+            type="color" provides a color picker.
+        -->
+
+
+        <br><br>
+
+
+        <label for="file">Upload File:</label>
+
+        <input type="file" id="file" name="file">
+        <!--
+            type="file" allows the user to select
+            a file from their device.
+
+            Useful for:
+            - Profile pictures
+            - Documents
+            - Assignments
+        -->
+        
+
+        <br><br>
+
+
+        <p>Gender:</p>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <!--
+            type="radio" creates a radio button.
+
+            Radio buttons are normally used when the user
+            should select ONE option from a group.
+
+            IMPORTANT:
+            Radio buttons in the same group should have
+            the same "name" attribute.
+        -->
+
+
+        <br><br>
+
+
+        <p>Skills:</p>
+
+        <input type="checkbox" id="html" name="skills" value="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="skills" value="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js" name="skills" value="javascript">
+        <label for="js">JavaScript</label>
+
+        <!--
+            type="checkbox" creates a checkbox.
+
+            Checkboxes are useful when the user can select
+            ZERO, ONE or MULTIPLE options.
+        -->
+
+
+        <br><br>
+
+
+        <label for="course">Choose Course:</label>
+
+        <select id="course" name="course">
+            <!--
+                <select> creates a dropdown list.
+            -->
+
+            <option value="">Select Course</option>
+            <!--
+                <option> represents one option inside
+                a select dropdown.
+            -->
+
+            <option value="btech">B.Tech</option>
+            <option value="bca">BCA</option>
+            <option value="mca">MCA</option>
+        </select>
+
+
+        <br><br>
+
+
+        <label for="message">Message:</label>
+
+        <textarea id="message" name="message" rows="5" cols="30"></textarea>
+        <!--
+            <textarea> creates a multi-line text input.
+
+            Useful for:
+            - Feedback
+            - Comments
+            - Messages
+            - Addresses
+        -->
+
+
+        <br><br>
+
+
+        <button type="submit">Submit</button>
+        <!--
+            <button> creates a clickable button.
+
+            type="submit"
+            --------------
+            Submits the form.
+        -->
+
+
+        <button type="reset">Reset</button>
+        <!--
+            type="reset" resets the form fields
+            to their initial values.
+        -->
+
+
+    </form>
+
+
+    <!-- ============================= -->
+    <!--       COMMON INPUT TYPES      -->
+    <!-- ============================= -->
+
+
+    <input type="text">
+    <!-- Single-line text -->
+
+
+    <input type="email">
+    <!-- Email address -->
+
+
+    <input type="password">
+    <!-- Password -->
+
+
+    <input type="number">
+    <!-- Number -->
+
+
+    <input type="tel">
+    <!-- Telephone/mobile number -->
+
+
+    <input type="url">
+    <!-- Website URL -->
+
+
+    <input type="search">
+    <!-- Search field -->
+
+
+    <input type="date">
+    <!-- Date -->
+
+
+    <input type="time">
+    <!-- Time -->
+
+
+    <input type="datetime-local">
+    <!-- Local date and time -->
+
+
+    <input type="month">
+    <!-- Month and year -->
+
+
+    <input type="week">
+    <!-- Week and year -->
+
+
+    <input type="range">
+    <!-- Slider/range control -->
+
+
+    <input type="color">
+    <!-- Color picker -->
+
+
+    <input type="checkbox">
+    <!-- Checkbox -->
+
+
+    <input type="radio">
+    <!-- Radio button -->
+
+
+    <input type="file">
+    <!-- File upload -->
+
+
+    <input type="hidden">
+    <!--
+        Hidden input.
+
+        It is not visible to the user but can be submitted
+        along with the form.
+
+        Useful for storing values that the server needs.
+    -->
+
+
+    <!-- ============================= -->
+    <!--        INPUT ATTRIBUTES        -->
+    <!-- ============================= -->
+
+
+    <input type="text" placeholder="Enter your name">
+    <!--
+        placeholder provides a temporary hint
+        inside an input field.
+
+        It disappears when the user starts typing.
+    -->
+
+
+    <input type="text" value="Santosh">
+    <!--
+        value specifies the initial value of the input.
+    -->
+
+
+    <input type="text" required>
+    <!--
+        required makes the field mandatory.
+
+        The browser will normally prevent form submission
+        until the user enters a value.
+    -->
+
+
+    <input type="text" readonly value="Cannot edit">
+    <!--
+        readonly means the user cannot modify the value.
+
+        However, the value can generally still be submitted.
+    -->
+
+
+    <input type="text" disabled value="Disabled field">
+    <!--
+        disabled makes the input inactive.
+
+        The user cannot interact with it.
+
+        Disabled form controls are generally not submitted
+        with the form.
+    -->
+
+
+    <input type="number" min="1" max="100">
+    <!--
+        min defines the minimum allowed value.
+
+        max defines the maximum allowed value.
+    -->
+
+
+    <input type="text" minlength="3" maxlength="20">
+    <!--
+        minlength specifies minimum number of characters.
+
+        maxlength specifies maximum number of characters.
+    -->
+
+
+    <input type="email" placeholder="example@gmail.com" autocomplete="email">
+    <!--
+        autocomplete helps the browser automatically fill
+        previously entered information.
+
+        Useful for forms and better user experience.
+    -->
+
+
+    <!-- ============================= -->
+    <!--            MEDIA               -->
+    <!-- ============================= -->
+
+
+    <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+    <!--
+        <audio> embeds audio content.
+
+        controls displays browser-provided
+        play/pause/volume controls.
+
+        <source> specifies the audio file.
+
+        Useful for:
+        - Music
+        - Podcasts
+        - Audio lessons
+    -->
+
+
+    <video controls width="500">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+    <!--
+        <video> embeds video content.
+
+        controls displays video controls.
+
+        Common attributes:
+        controls
+        autoplay
+        muted
+        loop
+        poster
+
+        Usage:
+        - Tutorials
+        - Lectures
+        - Product videos
+    -->
+
+
+    <!-- ============================= -->
+    <!--             IFRAME             -->
+    <!-- ============================= -->
+
+
+    <iframe
+        src="https://example.com"
+        width="600"
+        height="400"
+        title="Example Website">
+    </iframe>
+    <!--
+        <iframe> embeds another webpage or external content
+        inside the current webpage.
+
+        Common uses:
+        - Google Maps
+        - YouTube videos
+        - External webpages
+        - Online documents
+
+        Always provide a meaningful title for accessibility.
+    -->
+
+
+    <!-- ============================= -->
+    <!--        DETAILS / SUMMARY       -->
+    <!-- ============================= -->
+
+
+    <details>
+        <summary>What is HTML?</summary>
+
+        <p>
+            HTML stands for HyperText Markup Language.
+        </p>
+    </details>
+    <!--
+        <details> creates expandable/collapsible content.
+
+        <summary> defines the visible heading
+        that the user clicks.
+
+        Useful for:
+        - FAQs
+        - Additional information
+        - Help sections
+    -->
+
+
+    <!-- ============================= -->
+    <!--            FIGURE              -->
+    <!-- ============================= -->
+
+
+    <figure>
+
+        <img src="computer.jpg" alt="Computer">
+
+        <figcaption>
+            A computer used for programming.
+        </figcaption>
+
+    </figure>
+    <!--
+        <figure> represents self-contained content,
+        commonly an image, diagram or illustration.
+
+        <figcaption> provides a caption/description
+        for the figure.
+    -->
+
+
+    <!-- ============================= -->
+    <!--           ADDRESS              -->
+    <!-- ============================= -->
+
+
+    <address>
+        Government College of Engineering<br>
+        Odisha, India
+    </address>
+    <!--
+        <address> represents contact information
+        for a person, organization or webpage.
+
+        It can contain:
+        - Address
+        - Email
+        - Phone number
+        - Website
+    -->
+
+
+    <!-- ============================= -->
+    <!--          TIME ELEMENT          -->
+    <!-- ============================= -->
+
+
+    <time datetime="2026-08-11">11 August 2026</time>
+    <!--
+        <time> represents a date or time.
+
+        datetime provides a machine-readable value.
+
+        Useful for:
+        - Events
+        - Blog publication dates
+        - Appointments
+        - Deadlines
+    -->
+
+
+    <!-- ============================= -->
+    <!--       PROGRESS / METER         -->
+    <!-- ============================= -->
+
+
+    <label for="progress">Download Progress:</label>
+
+    <progress id="progress" value="70" max="100">
+        70%
+    </progress>
+    <!--
+        <progress> represents the completion progress
+        of a task.
+
+        Example:
+        File download
+        Upload
+        Installation
+        Task completion
+    -->
+
+
+    <label for="storage">Storage Used:</label>
+
+    <meter id="storage" value="70" min="0" max="100">
+        70%
+    </meter>
+    <!--
+        <meter> represents a measurement within
+        a known range.
+
+        Examples:
+        - Disk usage
+        - Battery level
+        - Score
+        - Rating
+
+        Difference:
+
+        <progress> = progress of a task
+        <meter>    = measurement/value within a range
+    -->
+
+
+    <!-- ============================= -->
+    <!--       GLOBAL ATTRIBUTES        -->
+    <!-- ============================= -->
+
+
+    <p id="intro">
+        Introduction paragraph.
+    </p>
+    <!--
+        id uniquely identifies an HTML element.
+
+        An id should normally be unique within a webpage.
+
+        Common uses:
+        - CSS
+        - JavaScript
+        - Anchor links
+    -->
+
+
+    <p class="important">
+        Important information.
+    </p>
+    <!--
+        class assigns one or more classes to an element.
+
+        Classes are commonly used with:
+        - CSS
+        - JavaScript
+
+        Multiple elements can have the same class.
+    -->
+
+
+    <p title="This is additional information">
+        Hover over this text.
+    </p>
+    <!--
+        title provides additional information.
+
+        Browsers commonly show it as a tooltip
+        when the user hovers over the element.
+    -->
+
+
+    <p hidden>
+        This content is hidden.
+    </p>
+    <!--
+        hidden indicates that the element should not
+        currently be displayed.
+
+        JavaScript can later show it if required.
+    -->
+
+
+    <p data-student-id="101">
+        Student information
+    </p>
+    <!--
+        data-* attributes allow developers to store
+        custom data on HTML elements.
+
+        Example:
+        data-student-id
+        data-course
+        data-user-role
+
+        JavaScript can access these values.
+    -->
+
+
+    <!-- ============================= -->
+    <!--       HTML ENTITIES            -->
+    <!-- ============================= -->
+
+
+    <p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
+    <!--
+        HTML entities allow special characters
+        to be displayed as text.
+
+        &lt; = <
+        &gt; = >
+    -->
+
+
+    <p>&copy; 2026 My Website</p>
+    <!--
+        &copy; displays the copyright symbol: ©
+    -->
+
+
+    <p>5 &gt; 3</p>
+    <!--
+        &gt; displays the greater-than symbol: >
+    -->
+
+
+    <p>3 &lt; 5</p>
+    <!--
+        &lt; displays the less-than symbol: <
+    -->
+
+
+    <p>Tom &amp; Jerry</p>
+    <!--
+        &amp; displays the ampersand symbol: &
+    -->
+
+
+    <p>&quot;Hello HTML&quot;</p>
+    <!--
+        &quot; displays double quotation marks.
+    -->
+
+
+</body>
+</html>

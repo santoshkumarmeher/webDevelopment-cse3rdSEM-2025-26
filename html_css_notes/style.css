@@ -1,0 +1,2571 @@
+/* =========================================================
+   CSS - BASIC TO INTERMEDIATE REFERENCE
+   =========================================================
+
+   CSS stands for Cascading Style Sheets.
+
+   CSS is used to control the appearance and layout
+   of HTML elements.
+
+   CSS can control:
+   - Colors
+   - Fonts
+   - Text
+   - Spacing
+   - Borders
+   - Backgrounds
+   - Width and height
+   - Layout
+   - Flexbox
+   - Grid
+   - Responsive design
+   - Animations
+   - Transitions
+*/
+
+
+/* =========================================================
+   1. CSS SYNTAX
+   ========================================================= */
+
+
+/*
+    Basic CSS syntax:
+
+    selector {
+        property: value;
+    }
+
+    Example:
+*/
+
+p {
+    color: blue;
+}
+
+/*
+    p
+    --
+    Selector.
+
+    It selects all <p> elements.
+
+    color
+    -----
+    Property.
+
+    blue
+    ----
+    Value.
+
+    Together:
+
+    color: blue;
+
+    means:
+    Set the text color of the paragraph to blue.
+*/
+
+
+/* =========================================================
+   2. CSS COMMENTS
+   ========================================================= */
+
+
+/*
+    This is a CSS comment.
+
+    Comments are ignored by the browser.
+
+    They are useful for:
+    - Explaining code
+    - Organizing CSS
+    - Leaving notes
+    - Temporarily disabling code
+*/
+
+
+/* =========================================================
+   3. ELEMENT / TYPE SELECTOR
+   ========================================================= */
+
+
+p {
+    color: red;
+}
+
+/*
+    Element selector selects all elements
+    of a particular HTML type.
+
+    Example:
+
+    p  → all paragraphs
+    h1 → all h1 headings
+    button → all buttons
+    body → body element
+*/
+
+
+h1 {
+    color: darkblue;
+}
+
+
+/* =========================================================
+   4. CLASS SELECTOR
+   ========================================================= */
+
+
+.title {
+    color: green;
+}
+
+/*
+    A class selector starts with a dot (.).
+
+    HTML:
+
+    <h1 class="title">Hello</h1>
+
+    CSS:
+
+    .title {
+        color: green;
+    }
+
+    Multiple HTML elements can use the same class.
+
+    Example:
+
+    <p class="title">Hello</p>
+    <h2 class="title">Welcome</h2>
+*/
+
+
+/* =========================================================
+   5. ID SELECTOR
+   ========================================================= */
+
+
+#header {
+    background-color: black;
+}
+
+/*
+    An ID selector starts with #.
+
+    HTML:
+
+    <div id="header"></div>
+
+    CSS:
+
+    #header {
+        background-color: black;
+    }
+
+    An id should normally be unique on a webpage.
+
+    Use class when the same styling is needed
+    for multiple elements.
+*/
+
+
+/* =========================================================
+   6. UNIVERSAL SELECTOR
+   ========================================================= */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    * selects every HTML element.
+
+    Commonly used to create a basic CSS reset.
+
+    Example:
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+*/
+
+
+/* =========================================================
+   7. GROUPING SELECTOR
+   ========================================================= */
+
+
+h1,
+h2,
+h3 {
+    font-family: Arial, sans-serif;
+}
+
+/*
+    Multiple selectors can be grouped using commas.
+
+    Instead of:
+
+    h1 { ... }
+    h2 { ... }
+    h3 { ... }
+
+    We can write:
+
+    h1, h2, h3 {
+        ...
+    }
+
+    Useful when multiple elements need
+    the same styling.
+*/
+
+
+/* =========================================================
+   8. DESCENDANT SELECTOR
+   ========================================================= */
+
+
+.container p {
+    color: blue;
+}
+
+/*
+    Selects all <p> elements inside .container.
+
+    HTML:
+
+    <div class="container">
+        <p>Hello</p>
+    </div>
+
+    The paragraph will be selected.
+*/
+
+
+/* =========================================================
+   9. CHILD SELECTOR
+   ========================================================= */
+
+
+.container > p {
+    color: red;
+}
+
+/*
+    > means direct child.
+
+    It selects only <p> elements that are
+    direct children of .container.
+
+    Example:
+
+    <div class="container">
+        <p>Selected</p>
+
+        <section>
+            <p>Not selected</p>
+        </section>
+    </div>
+*/
+
+
+/* =========================================================
+   10. ADJACENT SIBLING SELECTOR
+   ========================================================= */
+
+
+h1 + p {
+    color: purple;
+}
+
+/*
+    + selects the first <p> immediately
+    after an <h1>.
+
+    Example:
+
+    <h1>Title</h1>
+    <p>This paragraph is selected.</p>
+*/
+
+
+/* =========================================================
+   11. GENERAL SIBLING SELECTOR
+   ========================================================= */
+
+
+h1 ~ p {
+    color: orange;
+}
+
+/*
+    ~ selects all <p> elements that are
+    siblings after the <h1>.
+*/
+
+
+/* =========================================================
+   12. COLORS
+   ========================================================= */
+
+
+p {
+    color: red;
+}
+
+/*
+    color changes the text color.
+*/
+
+
+p {
+    color: #ff0000;
+}
+
+/*
+    Hexadecimal color.
+
+    #RRGGBB
+
+    RR = Red
+    GG = Green
+    BB = Blue
+
+    #ff0000 = Red
+*/
+
+
+p {
+    color: rgb(255, 0, 0);
+}
+
+/*
+    RGB means:
+
+    Red
+    Green
+    Blue
+
+    Each value normally ranges from 0 to 255.
+*/
+
+
+p {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+/*
+    RGBA includes Alpha.
+
+    Alpha controls transparency.
+
+    0   = completely transparent
+    1   = completely visible
+    0.5 = 50% opacity
+*/
+
+
+p {
+    color: hsl(0, 100%, 50%);
+}
+
+/*
+    HSL means:
+
+    H = Hue
+    S = Saturation
+    L = Lightness
+*/
+
+
+/* =========================================================
+   13. BACKGROUND COLOR
+   ========================================================= */
+
+
+body {
+    background-color: lightgray;
+}
+
+/*
+    background-color changes the background color
+    of an element.
+*/
+
+
+/* =========================================================
+   14. BACKGROUND IMAGE
+   ========================================================= */
+
+
+body {
+    background-image: url("background.jpg");
+}
+
+/*
+    background-image sets an image as the background.
+*/
+
+
+/* =========================================================
+   15. BACKGROUND REPEAT
+   ========================================================= */
+
+
+body {
+    background-repeat: no-repeat;
+}
+
+/*
+    Common values:
+
+    repeat
+    repeat-x
+    repeat-y
+    no-repeat
+*/
+
+
+/* =========================================================
+   16. BACKGROUND SIZE
+   ========================================================= */
+
+
+body {
+    background-size: cover;
+}
+
+/*
+    cover:
+
+    Makes the background image cover
+    the entire element.
+
+    Other useful value:
+
+    contain
+
+    contain makes the complete image visible.
+*/
+
+
+/* =========================================================
+   17. BACKGROUND POSITION
+   ========================================================= */
+
+
+body {
+    background-position: center;
+}
+
+/*
+    Controls where the background image is positioned.
+
+    Common values:
+
+    center
+    top
+    bottom
+    left
+    right
+*/
+
+
+/* =========================================================
+   18. BACKGROUND SHORTHAND
+   ========================================================= */
+
+
+body {
+    background: #f5f5f5 url("background.jpg") center / cover no-repeat;
+}
+
+/*
+    background is a shorthand property.
+
+    It can combine:
+
+    background-color
+    background-image
+    background-position
+    background-size
+    background-repeat
+*/
+
+
+/* =========================================================
+   19. TEXT COLOR
+   ========================================================= */
+
+
+p {
+    color: #333;
+}
+
+/*
+    color controls the text color.
+*/
+
+
+/* =========================================================
+   20. TEXT ALIGNMENT
+   ========================================================= */
+
+
+h1 {
+    text-align: center;
+}
+
+/*
+    text-align controls horizontal alignment.
+
+    Common values:
+
+    left
+    center
+    right
+    justify
+*/
+
+
+/* =========================================================
+   21. TEXT DECORATION
+   ========================================================= */
+
+
+a {
+    text-decoration: none;
+}
+
+/*
+    Removes the default underline from links.
+*/
+
+
+/*
+    Other values:
+
+    text-decoration: underline;
+    text-decoration: line-through;
+    text-decoration: overline;
+*/
+
+
+/* =========================================================
+   22. TEXT TRANSFORMATION
+   ========================================================= */
+
+
+h1 {
+    text-transform: uppercase;
+}
+
+/*
+    Common values:
+
+    uppercase
+    lowercase
+    capitalize
+    none
+*/
+
+
+/* =========================================================
+   23. TEXT INDENT
+   ========================================================= */
+
+
+p {
+    text-indent: 30px;
+}
+
+/*
+    Adds indentation to the first line of text.
+*/
+
+
+/* =========================================================
+   24. LETTER SPACING
+   ========================================================= */
+
+
+h1 {
+    letter-spacing: 2px;
+}
+
+/*
+    Controls the spacing between characters.
+*/
+
+
+/* =========================================================
+   25. WORD SPACING
+   ========================================================= */
+
+
+p {
+    word-spacing: 5px;
+}
+
+/*
+    Controls the spacing between words.
+*/
+
+
+/* =========================================================
+   26. LINE HEIGHT
+   ========================================================= */
+
+
+p {
+    line-height: 1.6;
+}
+
+/*
+    Controls the vertical spacing between lines.
+
+    Very useful for improving readability.
+*/
+
+
+/* =========================================================
+   27. FONT FAMILY
+   ========================================================= */
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*
+    font-family specifies the font.
+
+    Multiple fonts can be provided as fallbacks.
+
+    If Arial is unavailable,
+    the browser uses sans-serif.
+*/
+
+
+/* =========================================================
+   28. FONT SIZE
+   ========================================================= */
+
+
+p {
+    font-size: 18px;
+}
+
+/*
+    font-size controls the size of text.
+
+    Common units:
+
+    px
+    rem
+    em
+    %
+    vw
+*/
+
+
+/* =========================================================
+   29. FONT WEIGHT
+   ========================================================= */
+
+
+h1 {
+    font-weight: bold;
+}
+
+/*
+    font-weight controls how thick the text appears.
+
+    Common values:
+
+    normal
+    bold
+    100
+    200
+    300
+    400
+    500
+    600
+    700
+    800
+    900
+*/
+
+
+/* =========================================================
+   30. FONT STYLE
+   ========================================================= */
+
+
+em {
+    font-style: italic;
+}
+
+/*
+    Common values:
+
+    normal
+    italic
+    oblique
+*/
+
+
+/* =========================================================
+   31. TEXT SHADOW
+   ========================================================= */
+
+
+h1 {
+    text-shadow: 2px 2px 4px gray;
+}
+
+/*
+    Syntax:
+
+    text-shadow:
+        horizontal-offset
+        vertical-offset
+        blur
+        color;
+
+    Example:
+
+    2px → horizontal movement
+    2px → vertical movement
+    4px → blur amount
+*/
+
+
+/* =========================================================
+   32. WIDTH
+   ========================================================= */
+
+
+.box {
+    width: 300px;
+}
+
+/*
+    width controls the width of an element.
+*/
+
+
+/* =========================================================
+   33. HEIGHT
+   ========================================================= */
+
+
+.box {
+    height: 200px;
+}
+
+/*
+    height controls the height of an element.
+*/
+
+
+/* =========================================================
+   34. MAX-WIDTH
+   ========================================================= */
+
+
+.container {
+    max-width: 1200px;
+}
+
+/*
+    max-width prevents an element from
+    becoming wider than the specified size.
+
+    Very useful for responsive websites.
+*/
+
+
+/* =========================================================
+   35. MIN-WIDTH
+   ========================================================= */
+
+
+.box {
+    min-width: 200px;
+}
+
+/*
+    Defines the minimum width of an element.
+*/
+
+
+/* =========================================================
+   36. MAX-HEIGHT / MIN-HEIGHT
+   ========================================================= */
+
+
+.box {
+    min-height: 200px;
+    max-height: 500px;
+}
+
+/*
+    min-height = minimum allowed height
+
+    max-height = maximum allowed height
+*/
+
+
+/* =========================================================
+   37. MARGIN
+   ========================================================= */
+
+
+.box {
+    margin: 20px;
+}
+
+/*
+    margin creates space OUTSIDE an element.
+
+    Think:
+
+        OUTSIDE
+    ┌───────────────────┐
+    │      MARGIN        │
+    │   ┌───────────┐   │
+    │   │  ELEMENT  │   │
+    │   └───────────┘   │
+    └───────────────────┘
+*/
+
+
+/* =========================================================
+   38. INDIVIDUAL MARGINS
+   ========================================================= */
+
+
+.box {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+/*
+    Controls each side separately.
+*/
+
+
+/* =========================================================
+   39. MARGIN SHORTHAND
+   ========================================================= */
+
+
+.box {
+    margin: 10px 20px 30px 40px;
+}
+
+/*
+    Order:
+
+    top
+    right
+    bottom
+    left
+
+    Think like a clock:
+
+           TOP
+            ↑
+    LEFT ←     → RIGHT
+            ↓
+         BOTTOM
+*/
+
+
+.box {
+    margin: 20px 40px;
+}
+
+/*
+    Two values:
+
+    20px = top + bottom
+    40px = left + right
+*/
+
+
+/* =========================================================
+   40. AUTO MARGIN
+   ========================================================= */
+
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+/*
+    auto allows the browser to automatically calculate
+    left and right margin.
+
+    This commonly centers a fixed/max-width block
+    horizontally.
+*/
+
+
+/* =========================================================
+   41. PADDING
+   ========================================================= */
+
+
+.box {
+    padding: 20px;
+}
+
+/*
+    padding creates space INSIDE the element.
+
+    Think:
+
+    ┌───────────────────────┐
+    │       PADDING         │
+    │   ┌───────────────┐   │
+    │   │    CONTENT    │   │
+    │   └───────────────┘   │
+    └───────────────────────┘
+
+    Difference:
+
+    margin  = outside space
+    padding = inside space
+*/
+
+
+/* =========================================================
+   42. BORDER
+   ========================================================= */
+
+
+.box {
+    border: 2px solid black;
+}
+
+/*
+    border shorthand:
+
+    width
+    style
+    color
+
+    2px     = border thickness
+    solid   = border style
+    black   = border color
+*/
+
+
+/* =========================================================
+   43. BORDER STYLES
+   ========================================================= */
+
+
+.box {
+    border-style: solid;
+}
+
+/*
+    Common border styles:
+
+    solid
+    dashed
+    dotted
+    double
+    groove
+    ridge
+    inset
+    outset
+    none
+*/
+
+
+/* =========================================================
+   44. BORDER RADIUS
+   ========================================================= */
+
+
+.box {
+    border-radius: 10px;
+}
+
+/*
+    Creates rounded corners.
+
+    50% can be used to create circular shapes
+    when width and height allow it.
+*/
+
+
+/* =========================================================
+   45. BOX SIZING
+   ========================================================= */
+
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+    box-sizing controls how width and height
+    are calculated.
+
+    border-box means:
+
+    width includes:
+    - content
+    - padding
+    - border
+
+    This is commonly used in modern CSS layouts.
+*/
+
+
+/* =========================================================
+   46. DISPLAY PROPERTY
+   ========================================================= */
+
+
+.box {
+    display: block;
+}
+
+/*
+    display controls how an element participates
+    in the layout.
+
+    Common values:
+
+    block
+    inline
+    inline-block
+    none
+    flex
+    grid
+*/
+
+
+/* =========================================================
+   47. BLOCK ELEMENT
+   ========================================================= */
+
+
+.box {
+    display: block;
+}
+
+/*
+    A block element generally:
+
+    - Starts on a new line
+    - Takes available width by default
+
+    Examples:
+    div
+    p
+    h1
+    section
+*/
+
+
+/* =========================================================
+   48. INLINE ELEMENT
+   ========================================================= */
+
+
+span {
+    display: inline;
+}
+
+/*
+    Inline elements generally:
+
+    - Stay on the same line
+    - Take only the space they need
+
+    Examples:
+    span
+    a
+    strong
+    em
+*/
+
+
+/* =========================================================
+   49. INLINE-BLOCK
+   ========================================================= */
+
+
+.button {
+    display: inline-block;
+}
+
+/*
+    inline-block combines useful characteristics:
+
+    - Sits inline with other elements
+    - Allows width and height
+    - Allows padding and margin
+*/
+
+
+/* =========================================================
+   50. DISPLAY NONE
+   ========================================================= */
+
+
+.hidden {
+    display: none;
+}
+
+/*
+    display: none completely removes the element
+    from the layout.
+
+    The element is not displayed.
+*/
+
+
+/* =========================================================
+   51. VISIBILITY
+   ========================================================= */
+
+
+.hidden {
+    visibility: hidden;
+}
+
+/*
+    visibility: hidden makes the element invisible,
+    but its layout space is generally preserved.
+
+    Difference:
+
+    display: none
+    → element disappears and space is removed
+
+    visibility: hidden
+    → element is invisible but space remains
+*/
+
+
+/* =========================================================
+   52. OPACITY
+   ========================================================= */
+
+
+.box {
+    opacity: 0.5;
+}
+
+/*
+    opacity controls transparency.
+
+    0   = completely transparent
+    1   = completely visible
+    0.5 = 50% opacity
+*/
+
+
+/* =========================================================
+   53. OVERFLOW
+   ========================================================= */
+
+
+.box {
+    overflow: hidden;
+}
+
+/*
+    overflow controls what happens
+    when content does not fit inside the element.
+
+    Common values:
+
+    visible
+    hidden
+    scroll
+    auto
+*/
+
+
+.box {
+    overflow: auto;
+}
+
+/*
+    auto allows scrollbars when necessary.
+*/
+
+
+/* =========================================================
+   54. BOX SHADOW
+   ========================================================= */
+
+
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*
+    Creates a shadow around an element.
+
+    Syntax:
+
+    box-shadow:
+        horizontal-offset
+        vertical-offset
+        blur
+        color;
+
+    Commonly used for:
+    - Cards
+    - Buttons
+    - Containers
+    - Modals
+*/
+
+
+/* =========================================================
+   55. CURSOR
+   ========================================================= */
+
+
+button {
+    cursor: pointer;
+}
+
+/*
+    Changes the mouse cursor.
+
+    pointer is commonly used for clickable elements.
+*/
+
+
+/* =========================================================
+   56. LIST STYLE
+   ========================================================= */
+
+
+ul {
+    list-style-type: square;
+}
+
+/*
+    Changes the bullet style.
+
+    Common values:
+
+    disc
+    circle
+    square
+    none
+*/
+
+
+/* =========================================================
+   57. REMOVE LIST BULLETS
+   ========================================================= */
+
+
+ul {
+    list-style: none;
+}
+
+/*
+    Removes default list bullets.
+
+    Commonly used when creating navigation menus.
+*/
+
+
+/* =========================================================
+   58. OBJECT FIT
+   ========================================================= */
+
+
+img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*
+    object-fit controls how replaced content,
+    such as images and videos, fits inside
+    its box.
+
+    cover
+    -----
+    Fills the box while maintaining aspect ratio.
+    Some parts may be cropped.
+
+    contain
+    -------
+    Shows the entire image while maintaining aspect ratio.
+*/
+
+
+/* =========================================================
+   59. POSITION PROPERTY
+   ========================================================= */
+
+
+.box {
+    position: static;
+}
+
+/*
+    static is the default positioning behavior.
+*/
+
+
+.box {
+    position: relative;
+}
+
+/*
+    relative keeps the element in normal document flow
+    but allows offset positioning.
+
+    It is also commonly used as the containing block
+    for absolutely positioned descendants.
+*/
+
+
+.box {
+    position: absolute;
+}
+
+/*
+    absolute removes the element from normal document flow
+    and positions it relative to its containing block.
+*/
+
+
+.box {
+    position: fixed;
+}
+
+/*
+    fixed positions an element relative to the viewport.
+
+    It remains in position while the page scrolls.
+
+    Common uses:
+    - Floating buttons
+    - Fixed navigation bars
+*/
+    
+
+.box {
+    position: sticky;
+    top: 0;
+}
+
+/*
+    sticky behaves like a relatively positioned element
+    until a specified scrolling threshold is reached.
+
+    Then it sticks to that position.
+
+    Common use:
+    Sticky navigation/header.
+*/
+
+
+/* =========================================================
+   60. TOP / RIGHT / BOTTOM / LEFT
+   ========================================================= */
+
+
+.box {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/*
+    These properties move positioned elements.
+
+    top
+    right
+    bottom
+    left
+
+    They work with positioned elements such as:
+    relative
+    absolute
+    fixed
+    sticky
+*/
+
+
+/* =========================================================
+   61. Z-INDEX
+   ========================================================= */
+
+
+.popup {
+    position: fixed;
+    z-index: 1000;
+}
+
+/*
+    z-index controls stacking order.
+
+    A higher z-index generally places an element
+    above elements with lower stacking order
+    within the relevant stacking context.
+
+    Commonly used for:
+    - Modals
+    - Dropdowns
+    - Navigation
+    - Popups
+*/
+
+
+/* =========================================================
+   62. FLEXBOX
+   ========================================================= */
+
+
+.container {
+    display: flex;
+}
+
+/*
+    display: flex turns the element into
+    a flex container.
+
+    Its direct children become flex items.
+
+    Flexbox is mainly used for one-dimensional layouts:
+    - Row
+    - Column
+*/
+
+
+/* =========================================================
+   63. FLEX DIRECTION
+   ========================================================= */
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+    row
+    ---
+    Items are arranged horizontally.
+
+    Other values:
+
+    column
+    row-reverse
+    column-reverse
+*/
+
+
+/* =========================================================
+   64. JUSTIFY CONTENT
+   ========================================================= */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    justify-content controls alignment
+    along the main axis.
+
+    Common values:
+
+    flex-start
+    flex-end
+    center
+    space-between
+    space-around
+    space-evenly
+*/
+
+
+/* =========================================================
+   65. ALIGN ITEMS
+   ========================================================= */
+
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/*
+    align-items controls alignment
+    along the cross axis.
+
+    Common values:
+
+    stretch
+    flex-start
+    flex-end
+    center
+    baseline
+*/
+
+
+/* =========================================================
+   66. FLEX WRAP
+   ========================================================= */
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*
+    Allows flex items to move onto multiple lines
+    when there is not enough space.
+
+    Values:
+
+    nowrap
+    wrap
+    wrap-reverse
+*/
+
+
+/* =========================================================
+   67. GAP
+   ========================================================= */
+
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+/*
+    gap creates space between flex/grid items.
+
+    It is usually cleaner than manually adding margins
+    between every child.
+*/
+
+
+/* =========================================================
+   68. FLEX GROW
+   ========================================================= */
+
+
+.item {
+    flex-grow: 1;
+}
+
+/*
+    flex-grow controls how much a flex item
+    can grow relative to other flex items.
+*/
+
+
+/* =========================================================
+   69. FLEX SHRINK
+   ========================================================= */
+
+
+.item {
+    flex-shrink: 1;
+}
+
+/*
+    flex-shrink controls how much a flex item
+    can shrink when space is limited.
+*/
+
+
+/* =========================================================
+   70. FLEX BASIS
+   ========================================================= */
+
+
+.item {
+    flex-basis: 200px;
+}
+
+/*
+    flex-basis defines the initial size
+    of a flex item along the main axis.
+*/
+
+
+/* =========================================================
+   71. FLEX SHORTHAND
+   ========================================================= */
+
+
+.item {
+    flex: 1;
+}
+
+/*
+    flex is a shorthand for:
+
+    flex-grow
+    flex-shrink
+    flex-basis
+
+    flex: 1 is commonly used to make items
+    share available space.
+*/
+
+
+/* =========================================================
+   72. CSS GRID
+   ========================================================= */
+
+
+.container {
+    display: grid;
+}
+
+/*
+    CSS Grid is a two-dimensional layout system.
+
+    It works with:
+
+    Rows
+    Columns
+
+    Useful for:
+    - Dashboards
+    - Galleries
+    - Card layouts
+    - Complex page layouts
+*/
+
+
+/* =========================================================
+   73. GRID TEMPLATE COLUMNS
+   ========================================================= */
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*
+    Creates three equal columns.
+
+    1fr means one fraction of the available space.
+*/
+
+
+/* =========================================================
+   74. REPEAT FUNCTION
+   ========================================================= */
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*
+    repeat(3, 1fr)
+
+    means:
+
+    Create 3 columns,
+    each taking 1 fraction of available space.
+*/
+
+
+/* =========================================================
+   75. GRID GAP
+   ========================================================= */
+
+
+.container {
+    display: grid;
+    gap: 20px;
+}
+
+/*
+    Creates spacing between grid rows and columns.
+*/
+
+
+/* =========================================================
+   76. GRID ROWS
+   ========================================================= */
+
+
+.container {
+    display: grid;
+    grid-template-rows: 100px 200px;
+}
+
+/*
+    Defines the height/track sizes of grid rows.
+*/
+
+
+/* =========================================================
+   77. GRID COLUMN / ROW SPAN
+   ========================================================= */
+
+
+.item {
+    grid-column: span 2;
+}
+
+/*
+    Makes the item span across two grid columns.
+*/
+
+
+.item {
+    grid-row: span 2;
+}
+
+/*
+    Makes the item span across two grid rows.
+*/
+
+
+/* =========================================================
+   78. CSS UNITS
+   ========================================================= */
+
+
+/*
+    Absolute units:
+
+    px
+    ----
+    Pixels.
+
+    Example:
+*/
+
+.box {
+    width: 300px;
+}
+
+
+/*
+    Relative units:
+
+    %
+    ----
+    Relative to a relevant containing dimension.
+
+    em
+    --
+    Relative to the font size of the relevant element/
+    inherited context.
+
+    rem
+    ---
+    Relative to the root element's font size.
+
+    vw
+    ---
+    1% of viewport width.
+
+    vh
+    ---
+    1% of viewport height.
+
+    fr
+    ---
+    Fractional unit used in CSS Grid.
+*/
+
+
+/* =========================================================
+   79. CSS VARIABLES
+   ========================================================= */
+
+
+:root {
+    --primary-color: #2563eb;
+    --spacing: 20px;
+}
+
+/*
+    CSS variables are custom properties.
+
+    They are commonly defined in :root
+    when they should be available throughout the document.
+
+    Variable names start with --.
+*/
+
+
+button {
+    background-color: var(--primary-color);
+    padding: var(--spacing);
+}
+
+/*
+    var() is used to access a CSS variable.
+
+    Advantages:
+    - Reuse values
+    - Easy theme changes
+    - Cleaner CSS
+*/
+
+
+/* =========================================================
+   80. PSEUDO-CLASS :HOVER
+   ========================================================= */
+
+
+button:hover {
+    background-color: darkblue;
+}
+
+/*
+    :hover applies styles when the mouse pointer
+    is over an element.
+
+    Commonly used for:
+    - Buttons
+    - Links
+    - Cards
+    - Navigation menus
+*/
+
+
+/* =========================================================
+   81. :FOCUS
+   ========================================================= */
+
+
+input:focus {
+    border-color: blue;
+}
+
+/*
+    :focus applies styles when an element
+    receives keyboard/input focus.
+
+    Very useful for form fields.
+*/
+
+
+/* =========================================================
+   82. :ACTIVE
+   ========================================================= */
+
+
+button:active {
+    transform: scale(0.98);
+}
+
+/*
+    :active applies while the element
+    is being activated/clicked.
+*/
+
+
+/* =========================================================
+   83. :VISITED
+   ========================================================= */
+
+
+a:visited {
+    color: purple;
+}
+
+/*
+    :visited applies to links that the browser
+    considers visited.
+
+    Privacy restrictions limit what can be styled
+    with :visited.
+*/
+
+
+/* =========================================================
+   84. :FIRST-CHILD
+   ========================================================= */
+
+
+li:first-child {
+    font-weight: bold;
+}
+
+/*
+    Selects an element if it is the first child
+    of its parent.
+*/
+
+
+/* =========================================================
+   85. :LAST-CHILD
+   ========================================================= */
+
+
+li:last-child {
+    color: red;
+}
+
+/*
+    Selects the last child of its parent.
+*/
+
+
+/* =========================================================
+   86. :NTH-CHILD
+   ========================================================= */
+
+
+li:nth-child(2) {
+    color: blue;
+}
+
+/*
+    Selects the second child.
+
+    Useful for:
+    - Alternating table rows
+    - Specific items
+    - Card layouts
+*/
+
+
+li:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*
+    Selects even-numbered children.
+
+    even:
+    2, 4, 6, 8...
+*/
+
+
+li:nth-child(odd) {
+    background-color: white;
+}
+
+/*
+    Selects odd-numbered children.
+
+    odd:
+    1, 3, 5, 7...
+*/
+
+
+/* =========================================================
+   87. :NOT()
+   ========================================================= */
+
+
+p:not(.special) {
+    color: gray;
+}
+
+/*
+    :not() selects elements that do NOT match
+    the specified selector.
+
+    Here:
+
+    All <p> elements except those
+    having class="special".
+*/
+
+
+/* =========================================================
+   88. ::BEFORE
+   ========================================================= */
+
+
+.title::before {
+    content: "★ ";
+}
+
+/*
+    ::before creates a generated pseudo-element
+    before the content of an element.
+
+    The content property is required for generated content.
+
+    Common uses:
+    - Icons
+    - Decorative elements
+    - Shapes
+*/
+
+
+/* =========================================================
+   89. ::AFTER
+   ========================================================= */
+
+
+.title::after {
+    content: " ✓";
+}
+
+/*
+    ::after creates generated content
+    after the element's content.
+
+    Common uses:
+    - Decorative lines
+    - Icons
+    - Badges
+    - Visual effects
+*/
+
+
+/* =========================================================
+   90. ATTRIBUTE SELECTOR
+   ========================================================= */
+
+
+input[type="email"] {
+    border: 1px solid blue;
+}
+
+/*
+    Selects input elements whose type attribute
+    is exactly "email".
+
+    Very useful for forms.
+*/
+
+
+input[required] {
+    border-color: red;
+}
+
+/*
+    Selects all input elements
+    having the required attribute.
+*/
+
+
+/* =========================================================
+   91. TRANSITION
+   ========================================================= */
+
+
+button {
+    background-color: blue;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+/*
+    transition creates a smooth change
+    between CSS property values.
+
+    Syntax:
+
+    transition:
+        property
+        duration
+        timing-function;
+
+    Example:
+
+    transition: all 0.3s ease;
+*/
+
+
+/* =========================================================
+   92. TRANSFORM
+   ========================================================= */
+
+
+.box {
+    transform: translateX(20px);
+}
+
+/*
+    transform can visually modify an element
+    without changing normal document flow.
+
+    Common functions:
+
+    translate()
+    scale()
+    rotate()
+    skew()
+*/
+
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/*
+    scale(1.05) makes the element 5% larger
+    relative to its original rendered size.
+*/
+
+
+.box {
+    transform: rotate(45deg);
+}
+
+/*
+    rotate() rotates an element.
+*/
+
+
+/* =========================================================
+   93. CSS ANIMATION
+   ========================================================= */
+
+
+@keyframes moveBox {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+
+}
+
+/*
+    @keyframes defines the stages of an animation.
+
+    from = starting state
+
+    to = ending state
+*/
+
+
+.box {
+    animation: moveBox 2s ease infinite;
+}
+
+/*
+    animation shorthand can specify:
+
+    animation-name
+    animation-duration
+    animation-timing-function
+    animation-iteration-count
+    etc.
+
+    infinite means the animation repeats continuously.
+*/
+
+
+/* =========================================================
+   94. MEDIA QUERY
+   ========================================================= */
+
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+}
+
+/*
+    @media is used for responsive design.
+
+    Here:
+
+    max-width: 768px
+
+    means the rules apply when the viewport
+    is 768px wide or narrower.
+
+    Useful for:
+    - Mobile phones
+    - Tablets
+    - Responsive layouts
+*/
+
+
+/* =========================================================
+   95. RESPONSIVE IMAGE
+   ========================================================= */
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+    This allows an image to shrink
+    within its containing element.
+
+    It helps prevent images from overflowing
+    small screens.
+*/
+
+
+/* =========================================================
+   96. CALC()
+   ========================================================= */
+
+
+.container {
+    width: calc(100% - 40px);
+}
+
+/*
+    calc() allows mathematical calculations
+    inside CSS property values.
+
+    Example:
+
+    100% - 40px
+*/
+
+
+/* =========================================================
+   97. MIN()
+   ========================================================= */
+
+
+.box {
+    width: min(90%, 1000px);
+}
+
+/*
+    min() chooses the smaller value.
+
+    Useful for responsive sizing.
+*/
+
+
+/* =========================================================
+   98. MAX()
+   ========================================================= */
+
+
+.box {
+    width: max(300px, 50%);
+}
+
+/*
+    max() chooses the larger value.
+*/
+
+
+/* =========================================================
+   99. CLAMP()
+   ========================================================= */
+
+
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+/*
+    clamp() provides:
+
+    minimum value
+    preferred value
+    maximum value
+
+    Syntax:
+
+    clamp(min, preferred, max)
+
+    Very useful for responsive typography.
+*/
+
+
+/* =========================================================
+   100. CSS SPECIFICITY
+   ========================================================= */
+
+
+/*
+    When multiple CSS rules target the same element,
+    the browser uses the cascade and specificity
+    to determine which declarations apply.
+
+    Simplified specificity order:
+
+    Inline styles
+        ↓
+    ID selectors
+        ↓
+    Class / attribute / pseudo-class selectors
+        ↓
+    Element / pseudo-element selectors
+
+    Example:
+*/
+
+
+p {
+    color: blue;
+}
+
+.text {
+    color: green;
+}
+
+#message {
+    color: red;
+}
+
+/*
+    If the same <p> has:
+
+    id="message"
+    class="text"
+
+    The ID rule has higher specificity
+    than the class and element rules.
+*/
+
+
+/* =========================================================
+   101. !IMPORTANT
+   ========================================================= */
+
+
+p {
+    color: red !important;
+}
+
+/*
+    !important gives a declaration very high priority
+    in the cascade.
+
+    Example:
+
+    color: red !important;
+
+    IMPORTANT:
+    Avoid using !important unnecessarily.
+
+    Excessive use makes CSS difficult to maintain
+    and override.
+*/
+
+
+/* =========================================================
+   102. ATTRIBUTE SELECTORS - ADVANCED
+   ========================================================= */
+
+
+input[type] {
+    border: 1px solid gray;
+}
+
+/*
+    Selects elements that have a "type" attribute.
+*/
+
+
+input[type="text"] {
+    background-color: white;
+}
+
+/*
+    Exact attribute match.
+*/
+
+
+a[href^="https"] {
+    color: green;
+}
+
+/*
+    ^= means "starts with".
+
+    Selects href values beginning with https.
+*/
+
+
+a[href$=".pdf"] {
+    color: red;
+}
+
+/*
+    $= means "ends with".
+
+    Selects links ending with .pdf.
+*/
+
+
+a[href*="google"] {
+    font-weight: bold;
+}
+
+/*
+    *= means "contains".
+
+    Selects href values containing "google".
+*/
+
+
+/* =========================================================
+   103. COMBINING FLEXBOX - PRACTICAL EXAMPLE
+   ========================================================= */
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/*
+    This combination creates a responsive
+    collection of cards.
+
+    display: flex
+    → enables Flexbox
+
+    justify-content: center
+    → centers items horizontally
+
+    align-items: center
+    → aligns items on the cross axis
+
+    gap
+    → adds space between items
+
+    flex-wrap: wrap
+    → allows items to move to another line
+      when necessary
+*/
+
+
+/* =========================================================
+   104. PRACTICAL CARD
+   ========================================================= */
+
+
+.card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*
+    This demonstrates how multiple CSS properties
+    work together to create a card component.
+*/
+
+
+/* =========================================================
+   105. PRACTICAL BUTTON
+   ========================================================= */
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/*
+    This creates a simple interactive button.
+
+    CSS properties used:
+
+    display
+    padding
+    border
+    border-radius
+    background-color
+    color
+    cursor
+    transition
+    transform
+*/
+
+
+/* =========================================================
+   106. PRACTICAL RESPONSIVE CARD GRID
+   ========================================================= */
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+/*
+    This is a powerful responsive Grid pattern.
+
+    auto-fit
+    --------
+    Automatically fits as many columns
+    as possible.
+
+    minmax(250px, 1fr)
+    ------------------
+    Each column should be at least 250px
+    but can grow to fill available space.
+
+    This can create responsive cards
+    without writing multiple media queries.
+*/
+
+
+/* =========================================================
+   END OF CSS REFERENCE
+   ========================================================= */
