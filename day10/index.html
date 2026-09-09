@@ -1,0 +1,157 @@
+<!-- DOM - Document Object Model -->
+ <!-- <h1 id="heading" class="heading">Hello</h1> -->
+
+<!-- <script>
+    let heading  = document.getElementById("heading");
+    heading.textContent = "Hello Student";
+</script>
+  -->
+
+
+  <!-- <script> -->
+    <!-- // let heading = document.querySelector("#heading");
+    // let heading = document.querySelector("h1")
+    // let heading = document.querySelector(".heading")
+    // heading.textContent = "Hello Student"; -->
+  <!-- </script> -->
+
+
+
+  <!-- SELECTING MULTIPLE ELEMENTS -->
+<!-- 
+<p class="text">HTML</p>
+<p class="text">CSS</p>
+<p class="text">JavaScript</p>
+
+<script>
+    let texts = document.querySelectorAll(".text");
+    texts.forEach(function(text){
+        text.style.color = "white";
+        text.style.backgroundColor = "black";
+    })
+</script> -->
+
+
+<!-- INNER HTML -->
+
+<!-- <div id="box"></div>
+
+<script>
+    let box = document.getElementById("box");
+    box.innerHTML = "<h1>headingTag</h1>"
+</script> -->
+
+
+
+<!-- Changing CSS using Javascript -->
+
+
+<!-- <h1 id="heading">hello</h1>
+
+<script>
+    let heading = document.getElementById("heading");
+
+    heading.style.color = "red";
+    heading.style.backgroundColor = "yellow";
+    heading.style.fontSize = "70px";
+    heading.style.textAlign = "center";
+
+
+</script> -->
+
+
+<!-- Changing HTML Attributes -->
+
+<!-- <img id="photo" src="./img1.jpg" width="400px">
+<a href="https://google.com" id="link">google</a>
+
+<script>
+ let photo1 = document.getElementById("photo");
+ let link = document.getElementById("link");
+ photo1.src = "img2.jpg";
+ link.href = "https://gcekjr.ac.in";
+</script> -->
+
+
+<!-- Getting Attribute Values -->
+
+<!-- 
+<img id="photo" src="./img1.jpg" alt="" width="400px">
+
+<script>
+    let photo = document.getElementById("photo");
+    let value1 = photo.getAttribute;
+    console.log(value1);
+</script> -->
+
+
+<!-- addEventListener -->
+
+
+<!-- <input type="text" name="" id="name">
+<button id="btn">Show Name</button>
+<p id="result"></p>
+
+<script>
+    let name = document.getElementById("name");
+    let button = document.getElementById("btn");
+    let result = document.getElementById("result");
+
+    button.addEventListener("mouseover",function(){
+        result.textContent = name.value;
+    })
+</script> -->
+
+
+
+
+
+
+
+<!-- <input type="text" name="" id="num1">
+<input type="text" name="" id="num2">
+<button id="btn">Add</button>
+<p id="result"></p>
+
+<script>
+    let num1 = document.getElementById("num1");
+    let num2 = document.getElementById("num2");
+    let button = document.getElementById("btn");
+    let result = document.getElementById("result");
+
+    button.addEventListener("click",function(){
+        result.textContent = Number(num1.value) + Number(num2.value);
+    })
+</script> -->
+
+
+
+
+<div id="display">0</div>
+
+<button onclick="press('7')">7</button>
+<button onclick="press('8')">8</button>
+<button onclick="press('9')">9</button>
+<button onclick="press('+')">+</button>
+
+<button onclick="press('4')">4</button>
+<button onclick="press('5')">5</button>
+<button onclick="press('6')">6</button>
+<button onclick="press('-')">-</button>
+
+<button onclick="press('1')">1</button>
+<button onclick="press('2')">2</button>
+<button onclick="press('3')">3</button>
+<button onclick="press('*')">*</button>
+
+<button onclick="">7</button>
+<button onclick="">7</button>
+<button onclick="">7</button>
+<button onclick="">7</button>
+
+<script>
+    let display = document.getElementById("display");
+    function press(value){
+        display.textContent += value;
+    }
+</script>
