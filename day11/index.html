@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div id="display" class="display">0</div>
+
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn">+</button>
+
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn">-</button>
+
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn">*</button>
+
+      <button class="btn">0</button>
+      <button id="equal">=</button>
+      <button class="btn">.</button>
+      <button class="btn">/</button>
+      <button id="clear">C</button>
+      
+    </div>
+
+    <script>
+      let display = document.getElementById("display");
+      let button = document.querySelectorAll(".btn");
+      let equal = document.getElementById("equal");
+      let clear = document.getElementById("clear");
+
+      button.forEach(function (button) {
+        button.addEventListener("click", function () {
+          let value = button.textContent;
+          if (display.textContent === "0") {
+            display.textContent = value;
+          } else {
+            display.textContent += value;
+          }
+        });
+      });
+
+      equal.addEventListener("click",function(){
+        display.textContent = eval(display.textContent);
+      })
+
+      clear.addEventListener("click",function(){
+        display.textContent = "0";
+      })
+
+    //   Keyboard Support
+
+    document.addEventListener("keydown",function(event){
+        let key = event.key;
+
+        if (key >= "0" && key <= "9" || 
+        key === "*" ||
+        key === "/" ||
+        key === "+" ||
+        key === "-" || 
+        key === "."
+    ){
+
+        if (display.textContent === "0"){
+            display.textContent = key;
+        }else{
+            display.textContent += key;
+        }
+
+        }
+
+        if (key === "Escape"){
+            display.textContent = "0";
+        }
+
+        if (key === "Enter" || key === " "){
+            display.textContent = eval(display.textContent);
+        }
+    })
+
+
+    </script>
+  </body>
+</html>
