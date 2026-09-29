@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box ball1"></div>
+    <div class="box ball2"></div>
+    <div class="box ball3"></div>
+    <div class="box ball4"></div>
+    <div class="box ball5"></div>
+
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        background-color: rebeccapurple;
+        animation: move 2s infinite alternate-reverse;
+      }
+      .ball1{
+        animation-timing-function: ease;
+      }
+      .ball2{
+        animation-timing-function: ease-in;
+      }
+      .ball3{
+        animation-timing-function: ease-out;
+      }
+      .ball4{
+        animation-timing-function: ease-in-out;
+      }
+      .ball5{
+        animation-timing-function: linear;
+      }
+      /* @keyframes move {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(200px);
+        }
+      } */
+
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        /* 50% {
+          transform: translateX(200px);
+        } */
+        100% {
+          transform: translateX(200px);
+        }
+      }
+
+
+    </style>
+  </body>
+</html>
