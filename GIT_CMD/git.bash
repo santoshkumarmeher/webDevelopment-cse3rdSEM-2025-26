@@ -370,3 +370,75 @@ git tag -a v1.0.0 -m "Release version 1.0.0"
 
 # Lightweight tag: 
 git tag v1.0.0
+
+
+# ============================================================
+#                 GITHUB / REMOTE REPOSITORY
+# ============================================================
+
+# Clone a repository from GitHub
+git clone <repository-url>
+
+# Example:
+git clone https://github.com/username/project.git
+
+# Check remote repositories
+git remote -v
+
+# Add a remote repository
+git remote add origin <repository-url>
+
+# Example:
+git remote add origin https://github.com/username/project.git
+
+# Change remote URL
+git remote set-url origin <new-repository-url>
+
+# Rename a remote
+git remote rename origin upstream
+
+# Remove a remote
+git remote remove origin
+
+# Push local branch to GitHub
+git push -u origin main
+
+# Push current branch to remote
+git push
+
+# Push a specific branch
+git push origin <branchname>
+
+# Pull latest changes from remote branch
+git pull origin main
+
+# Fetch changes without merging
+git fetch origin
+
+# Check current branch tracking info
+git branch -vv
+
+# Create a new branch and push it to GitHub
+git checkout -b feature
+git push -u origin feature
+
+# If repository is already initialized and remote is connected:
+# 1. git add .
+# 2. git commit -m "Your message"
+# 3. git push origin main
+
+
+# ============================================================
+#              GITHUB WORKFLOW EXAMPLE
+# ============================================================
+
+# Create repo on GitHub
+# Copy the URL
+# In local project:
+
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/username/project.git
+git push -u origin main
