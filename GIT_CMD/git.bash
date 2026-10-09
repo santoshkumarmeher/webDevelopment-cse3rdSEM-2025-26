@@ -287,6 +287,15 @@ git stash pop
 # Keep the stash and also apply the changes to the working tree
 git stash apply
 
+# Apply lastest stash and remove the stash from the stack
+git stash pop "stash@{0}" 
+
+# Apply lastest stash but keep the stash in stack
+git stash apply "stash{0}"
+
+# To clear all stash from stack
+git stash clear
+
 
 # ============================================================
 #                 BRANCHING BEST PRACTICES
@@ -316,11 +325,22 @@ git tag
 git tag -a v1.0 -m "my release"
 
 # Example of a lightweight tag
-git tag v1.0
+git tag v1.0.0
 
 # Best for temporary or private use
-git tag v1.0
+git tag version1.0.1
 
+# view tag's details
+git show v1.0.0
+
+# Switch to a tag
+git switch --detach v1.0.0
+
+# Create a branch from a tag
+git switch -c my-branch v1.0.0
+
+# Puch a tag
+git push origin v1.0.0
 
 # ============================================================
 #                          REBASE
