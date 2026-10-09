@@ -337,6 +337,25 @@ git rebase main
 
 
 # ============================================================
+#                          FETCH
+# ============================================================
+
+# Download latest changes but don't apply changes to current files/branch
+git fetch origin master 
+
+# To check the difference between local feature and remote master
+git diff feature origin/master
+
+# To merge remote master to local feature
+git merge origin/master
+
+# To directly merge remote changes to current local files/branch
+git pull origin master    
+
+FETCH + MERGE = PULL
+
+
+# ============================================================
 #                     QUICK REFERENCE
 # ============================================================
 
