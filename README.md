@@ -2,7 +2,13 @@
 
 A clean, hands-on learning repo for building web skills from the basics to modern front-end work.
 
-![Web Development Banner](https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80)
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00FF41&center=true&vCenter=true&width=780&lines=Web+Development+Class;HTML+CSS+JS+React+Git" alt="Web Development Class banner" />
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg" alt="Matrix effect" width="100%" />
+</div>
 
 ## 🧠 What you'll learn
 
