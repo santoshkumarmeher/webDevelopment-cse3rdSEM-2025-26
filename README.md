@@ -3,7 +3,7 @@
 A clean, hands-on learning repo for building web skills from the basics to modern front-end work.
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00FF41&center=true&vCenter=true&width=780&lines=Web+Development+Class;HTML+CSS+JS+React+Git" alt="Web Development Class banner" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00FF41&center=true&vCenter=true&width=780&lines=Web+Development+Class;HTML+CSS+JS+React+Git+GitHub" alt="Web Development Class banner" />
 </div>
 
 <div align="center">
