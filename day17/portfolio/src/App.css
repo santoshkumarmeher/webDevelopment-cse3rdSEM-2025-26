@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: center;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.hero{
+  text-align: center;
+  height: 200px;
+  margin-top: 30px;
+  border: 3px solid black;
+  margin: 20px;
+  border-radius: 10px;
+}
